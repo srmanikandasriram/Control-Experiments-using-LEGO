@@ -1,0 +1,8 @@
+1. Add grips to Front wheel - To maintain friction - Caused height difference, hence removed.
+2. Implement Cart velocity control for a square wave.
+3. Find mapping between Ultrasonic reading absolute angle.
+
+4. Implement Load position control.
+
+a. Derivation of a_b - Low path filter coefficient of Battery voltage reading. need for discrete filter.
+b.

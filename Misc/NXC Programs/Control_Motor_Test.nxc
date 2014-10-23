@@ -1,0 +1,128 @@
+//=================================================
+// Control Engineering Lab, IIT Madras
+//
+// Implementing Control Experiments explained in
+// 'A LEGO based Undergraduate Control Systems Laboratory'
+// by Rahul Jain and Sabiha A Wadoo from New York Institue of Technology
+//
+
+// Port Input and Output
+#define LEFT_MOTOR  OUT_C
+#define RIGHT_MOTOR OUT_A
+#define MOTORS      OUT_AC
+
+// LOOP_WAIT_TIME is the time in ms passed to Wait command.
+#define LOOP_WAIT_TIME 500
+
+#define RECORDS 10
+#define RECORD_SIZE 6
+#define FILE_SIZE (RECORD_SIZE*RECORDS)
+#define FILE_NAME "motors.dat"
+
+// Global Variables
+int motorSpeed = 50;
+byte handle = 0; // File Handle
+
+struct MotorData
+{
+     long encoderCnt;
+     char actualSpeed;
+     char motorPower;
+};
+
+// Declare variables for data
+MotorData leftMotor, rightMotor;
+
+// Make sure file is closed whether or not file operations succeed or fail.
+void shutdown(const int delay)
+{
+   if (handle) CloseFile(handle);
+   Off(MOTORS);
+   // Get user's attention.
+   PlayTone(TONE_C5, SEC_1);
+   // Give the user time to read screen messages.
+   Wait(delay);
+   Stop(true);
+}
+
+// Display a return code from a file sytem API call on the NXT screen.
+void rtn_code_out(const unsigned int code){
+   TextOut(0, LCD_LINE2, "code            ");
+   TextOut(50, LCD_LINE2, FormatNum("%04x", code));
+}
+
+void open_for_write()
+{
+     unsigned int file_size = FILE_SIZE;
+     handle = 0;
+     // Start with the assumptions the file doesn't exist and needs to be created.
+     unsigned int rtn_code = CreateFile(FILE_NAME, file_size, handle);
+     // If the file already exists, open it with the intent of adding to the data
+     // that is already there.
+     if (rtn_code == LDR_FILEEXISTS)
+        rtn_code = OpenFileAppend(FILE_NAME, file_size, handle);
+     // Return code handling
+     switch (rtn_code)
+     {
+     case LDR_SUCCESS:
+          return;
+     case LDR_FILEISFULL:
+          TextOut(0, LCD_LINE1, "file is full    ");
+          break;
+     default:
+           // Unanticipated exception.
+           TextOut(0, LCD_LINE1, "write open      ");
+           rtn_code_out(rtn_code);
+           break;
+     }
+     shutdown(SEC_8);
+}
+
+// Write one circle record to the data file.
+void write_recd(const MotorData recd)
+{
+   unsigned int rtn_code = Write(handle, recd);
+   // Return code handling
+   if (rtn_code != LDR_SUCCESS)
+   {
+      switch (rtn_code)
+      {
+      case LDR_EOFEXPECTED:
+         TextOut(0, LCD_LINE1, "no more space   ");
+         break;
+      default:
+         // Unanticipated exception. 
+         TextOut(0, LCD_LINE1, "write failed    ");
+         rtn_code_out(rtn_code);
+         break;
+      }
+      shutdown(SEC_8);
+   }
+}
+
+task main()
+{
+    ClearScreen();
+    TextOut(0, LCD_LINE1, "Control Lab, IIT Madras");
+
+    // Reset the motors to make sure we start at a zero position
+    ResetAllTachoCounts(LEFT_MOTOR);
+    ResetAllTachoCounts(RIGHT_MOTOR);
+
+    OnFwdReg(MOTORS, 75, OUT_REGMODE_SPEED);
+
+    open_for_write(); 
+    while(true){
+        leftMotor.encoderCnt = MotorBlockTachoCount(LEFT_MOTOR);
+        rightMotor.encoderCnt = MotorBlockTachoCount(RIGHT_MOTOR);
+        leftMotor.actualSpeed = MotorActualSpeed(LEFT_MOTOR);
+        rightMotor.actualSpeed = MotorActualSpeed(RIGHT_MOTOR);
+        leftMotor.motorPower = MotorPower(LEFT_MOTOR);
+        rightMotor.motorPower = MotorPower(RIGHT_MOTOR);
+        write_recd(leftMotor);
+        write_recd(rightMotor);
+        Wait(LOOP_WAIT_TIME);
+    }
+    Off(MOTORS);
+    CloseFile(handle);
+}

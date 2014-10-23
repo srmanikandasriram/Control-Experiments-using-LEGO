@@ -1,0 +1,611 @@
+#SYMBOLS
+Index	Identifier	Type	Flag	Data	Size	RefCount
+0	__signed_stack_001open_for_write	6	1	0	4	4
+1	__signed_stack_002main	6	1	4	4	2
+2	__signed_stack_001main	6	1	8	4	4
+3	__signed_stack_001rtn_code_out	6	1	12	4	4
+4	__unsigned_stack_001open_for_write	5	1	16	4	2
+5	__signed_stack_002open_for_write	6	1	20	4	4
+6	__D0shutdown	6	1	24	4	8
+7	__DU0rtn_code_out	5	1	28	4	2
+8	__D0rtn_code_out	6	1	32	4	2
+9	__DU0write_recd	5	1	36	4	2
+10	__D0write_recd	6	1	40	4	6
+11	__DU0shutdown	5	1	44	4	2
+12	__constVal36608	6	0	48	4	1
+13	__Wait_7qG2_ms_7qG2_000_inline_shutdown	5	1	52	4	2
+14	__unsigned_stack_001write_recd	5	1	56	4	2
+15	__Wait_7qG2_ms_7qG2_000_inline_main	5	1	60	4	2
+16	__constVal33792	6	0	64	4	1
+17	__constVal36352	6	0	68	4	1
+18	__signed_stack_002shutdown	6	1	72	4	2
+19	__signed_stack_001shutdown	6	1	76	4	2
+20	__signed_stack_002rtn_code_out	6	1	80	4	4
+21	__signed_stack_002write_recd	6	1	84	4	4
+22	__signed_stack_001write_recd	6	1	88	4	4
+23	__signed_stack_003shutdown	6	1	92	4	2
+24	__D0open_for_write	6	1	96	4	10
+25	__D0main	6	1	100	4	8
+26	__SPTArgsMutex	9	0	104	4	2
+27	__TextOutMutex	9	0	108	4	14
+28	__DU0open_for_write	5	1	112	4	3
+29	__FCMutex	9	0	116	4	4
+30	__FOMutex	9	0	120	4	4
+31	__shutdown_7qG2_delay_7qG2_000	4	1	124	2	3
+32	__open_for_write_7qG2_rtn_code_7qG2_000	3	1	126	2	5
+33	__write_recd_7qG2_rtn_code_7qG2_000	3	1	128	2	3
+34	__rtn_code_out_7qG2_code_7qG2_000	3	1	130	2	3
+35	__open_for_write_7qG2_file_size_7qG2_000	3	1	132	2	3
+36	__constVal200	4	0	134	2	2
+37	__rtn_code_out_return	1	1	136	1	4
+38	__open_for_write_return	1	1	137	1	4
+39	__constVal3	2	0	138	1	2
+40	__shutdown_return	1	1	139	1	4
+41	__constVal96	2	0	140	1	3
+42	__constVal63	2	0	141	1	3
+43	__constVal32	2	0	142	1	9
+44	____initialize_global_data_return	1	1	143	1	3
+45	__constVal104	2	0	144	1	2
+46	__constVal0	2	1	145	1	15
+47	__constVal1	2	0	146	1	1
+48	__write_recd_return	1	1	147	1	4
+49	handle	1	1	148	1	7
+50	__constVal2	2	0	149	1	4
+51	__constVal7	2	0	150	1	1
+52	__FOArgs	8	0	4	12	10
+53	__FOArgs.Result	3	1	152	2	10
+54	__FOArgs.FileHandle	1	1	154	1	10
+55	__FOArgs.Filename	7	0	156	4	10
+56	__FOArgs.Filename.Filename_type	1	0	0	1	0
+57	__FOArgs.Length	5	1	160	4	10
+58	rightMotor	8	0	3	8	4
+59	rightMotor.encoderCnt	6	1	164	4	4
+60	rightMotor.actualSpeed	2	1	168	1	4
+61	rightMotor.motorPower	2	1	169	1	4
+62	__PointOutArgs	8	0	3	12	4
+63	__PointOutArgs.Result	2	1	172	1	4
+64	__PointOutArgs.Location	8	0	2	4	4
+65	__PointOutArgs.Location.X	4	1	176	2	4
+66	__PointOutArgs.Location.Y	4	1	178	2	4
+67	__PointOutArgs.Options	5	1	180	4	4
+68	__FWriteArgs	8	0	4	12	7
+69	__FWriteArgs.Result	3	1	184	2	7
+70	__FWriteArgs.FileHandle	1	1	186	1	7
+71	__FWriteArgs.Buffer	7	0	188	4	7
+72	__FWriteArgs.Buffer.Buffer_type	1	0	0	1	0
+73	__FWriteArgs.Length	5	1	192	4	7
+74	__FCArgs	8	0	2	4	6
+75	__FCArgs.Result	3	1	196	2	6
+76	__FCArgs.FileHandle	1	1	198	1	6
+77	__write_recd_7qG2_recd_7qG2_000	8	0	3	8	3
+78	__write_recd_7qG2_recd_7qG2_000.encoderCnt	6	1	200	4	3
+79	__write_recd_7qG2_recd_7qG2_000.actualSpeed	2	1	204	1	3
+80	__write_recd_7qG2_recd_7qG2_000.motorPower	2	1	205	1	3
+81	leftMotor	8	0	3	8	4
+82	leftMotor.encoderCnt	6	1	208	4	4
+83	leftMotor.actualSpeed	2	1	212	1	4
+84	leftMotor.motorPower	2	1	213	1	4
+85	__SPTArgs	8	0	5	8	6
+86	__SPTArgs.Result	2	1	216	1	6
+87	__SPTArgs.Frequency	3	1	218	2	6
+88	__SPTArgs.Duration	3	1	220	2	6
+89	__SPTArgs.Loop	1	1	222	1	6
+90	__SPTArgs.Volume	1	1	223	1	6
+91	__TextOutArgs	8	0	4	16	42
+92	__TextOutArgs.Result	2	1	224	1	42
+93	__TextOutArgs.Location	8	0	2	4	42
+94	__TextOutArgs.Location.X	4	1	228	2	42
+95	__TextOutArgs.Location.Y	4	1	230	2	42
+96	__TextOutArgs.Text	7	0	232	4	42
+97	__TextOutArgs.Text.Text_type	1	0	0	1	0
+98	__TextOutArgs.Options	5	1	236	4	42
+99	__strbufopen_for_write	7	0	240	4	4
+100	__strbufopen_for_write.__strbufopen_for_write_type	1	0	0	1	0
+101	__constStr0014	7	0	242	4	1
+102	__constStr0014.__constStr0014_type	1	1	0	1	0
+103	__FWriteFlattenBuf	7	0	244	4	2
+104	__FWriteFlattenBuf.__FWriteFlattenBuf_type	1	0	0	1	0
+105	__OUT_AC	7	0	246	4	3
+106	__OUT_AC.__OUT_AC_type	1	0	0	1	0
+107	__constStr0015	7	0	248	4	1
+108	__constStr0015.__constStr0015_type	1	1	0	1	0
+109	__constStr0016	7	0	250	4	1
+110	__constStr0016.__constStr0016_type	1	1	0	1	0
+111	__strbufwrite_recd	7	0	252	4	4
+112	__strbufwrite_recd.__strbufwrite_recd_type	1	0	0	1	0
+113	__strbufrtn_code_out	7	0	254	4	6
+114	__strbufrtn_code_out.__strbufrtn_code_out_type	1	0	0	1	0
+115	__constStr0011	7	0	256	4	2
+116	__constStr0011.__constStr0011_type	1	1	0	1	0
+117	__constStr0010	7	0	258	4	1
+118	__constStr0010.__constStr0010_type	1	1	0	1	0
+119	__strretvalrtn_code_out	7	0	260	4	2
+120	__strretvalrtn_code_out.__strretvalrtn_code_out_type	1	0	0	1	0
+121	__constStr0013	7	0	262	4	1
+122	__constStr0013.__constStr0013_type	1	1	0	1	0
+123	__strbufmain	7	0	264	4	2
+124	__strbufmain.__strbufmain_type	1	0	0	1	0
+125	__constStr0009	7	0	266	4	1
+126	__constStr0009.__constStr0009_type	1	1	0	1	0
+127	__constStr0012	7	0	268	4	1
+128	__constStr0012.__constStr0012_type	1	1	0	1	0
+#SOURCES
+Clump	Line	PC	Source
+0	104	0	#line 104 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	105	0		subcall __initialize_global_data, ____initialize_global_data_return
+0	104	2	#line 104 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	6678	2	#line 6678 "NXCDefs.h"
+0	6679	2	#pragma macro 6
+0	6679	2		mov __PointOutArgs.Location.X, __constVal200
+0	6679	4		mov __PointOutArgs.Location.Y, __constVal200
+0	6679	6		mov __PointOutArgs.Options, __constVal1
+0	6679	8		syscall 14, __PointOutArgs
+0	6738	11	#line 6738 "NXCDefs.h"
+0	6678	11	#line 6678 "NXCDefs.h"
+0	105	11	#line 105 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	105	11	#line 105 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	106	11		set __signed_stack_001main, 0
+0	105	14	#line 105 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	105	14	#line 105 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	106	14		set __signed_stack_002main, 56
+0	105	17	#line 105 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	105	17	#line 105 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	106	17		strcat __strbufmain, __constStr0016
+0	108	21	#line 108 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	109	21		acquire __TextOutMutex
+0	108	22	#line 108 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	109	22		mov __TextOutArgs.Location.X, __signed_stack_001main
+0	108	24	#line 108 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	109	24		mov __TextOutArgs.Location.Y, __signed_stack_002main
+0	108	26	#line 108 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	109	26		set __TextOutArgs.Options, 0
+0	108	29	#line 108 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	109	29		mov __TextOutArgs.Text, __strbufmain
+0	108	31	#line 108 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	109	31		syscall 13, __TextOutArgs
+0	108	34	#line 108 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	109	34		mov __D0main, __TextOutArgs.Result
+0	108	36	#line 108 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	109	36		release __TextOutMutex
+0	108	37	#line 108 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	109	37	#line 109 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	110	37	#pragma macro 7
+0	110	37		setout __constVal2, 0, __constVal104
+0	6773	42	#line 6773 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	109	42	#line 109 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	111	42	#line 111 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	112	42	#pragma macro 7
+0	112	42		setout __constVal0, 0, __constVal104
+0	6776	47	#line 6776 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	111	47	#line 111 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	111	47	#line 111 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	112	47		set __signed_stack_001main, 75
+0	111	50	#line 111 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	111	50	#line 111 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	112	50		set __D0main, 1
+0	113	53	#line 113 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	114	53	#pragma macro 7
+0	114	53		setout __OUT_AC, 2, __signed_stack_001main, 1, __constVal7, 8, __D0main, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+0	6786	76	#line 6786 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	113	76	#line 113 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	114	76	#line 114 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	115	76		subcall open_for_write, __open_for_write_return
+0	114	78	#line 114 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	114	78	#line 114 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	115	78		set __D0main, 1
+0	115	81	#line 115 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	116	81		tst 5, __D0main, __D0main
+0	115	84	#line 115 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	116	84		brtst 4, __ASM_Label_689, __D0main
+0	116	87	#line 116 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	117	87		getout leftMotor.encoderCnt, __constVal2, 13
+0	116	91	#line 116 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	116	91	#line 116 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	117	91	#line 117 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	118	91		getout rightMotor.encoderCnt, __constVal0, 13
+0	117	95	#line 117 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	117	95	#line 117 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	118	95	#line 118 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	119	95		getout leftMotor.actualSpeed, __constVal2, 3
+0	118	99	#line 118 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	118	99	#line 118 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	119	99	#line 119 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	120	99		getout rightMotor.actualSpeed, __constVal0, 3
+0	119	103	#line 119 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	119	103	#line 119 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	120	103	#line 120 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	121	103		getout leftMotor.motorPower, __constVal2, 2
+0	120	107	#line 120 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	120	107	#line 120 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	121	107	#line 121 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	122	107		getout rightMotor.motorPower, __constVal0, 2
+0	121	111	#line 121 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	121	111	#line 121 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	121	111	#line 121 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	122	111		mov __write_recd_7qG2_recd_7qG2_000, leftMotor
+0	122	113	#line 122 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	123	113		subcall write_recd, __write_recd_return
+0	122	115	#line 122 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	122	115	#line 122 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	123	115		mov __write_recd_7qG2_recd_7qG2_000, rightMotor
+0	123	117	#line 123 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	124	117		subcall write_recd, __write_recd_return
+0	123	119	#line 123 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	123	119	#line 123 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	124	119		set __Wait_7qG2_ms_7qG2_000_inline_main, 500
+0	123	122	#line 123 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	8551	122	#line 8551 "NXCDefs.h"
+0	8552	122		waitv __Wait_7qG2_ms_7qG2_000_inline_main
+0	8551	124	#line 8551 "NXCDefs.h"
+0	124	124	#line 124 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	125	124	#line 125 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	126	124		jmp __ASM_Label_688
+0	125	126	#line 125 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	126	126	#line 126 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	127	126	#pragma macro 7
+0	127	126		setout __OUT_AC, 2, __constVal0, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+0	6868	149	#line 6868 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	126	149	#line 126 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	126	149	#line 126 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	127	149	#pragma macro 5
+0	127	149		acquire __FCMutex
+0	127	150		mov __FCArgs.FileHandle, handle
+0	127	152		syscall 5, __FCArgs
+0	127	155		mov __D0main, __FCArgs.Result
+0	127	157		release __FCMutex
+0	6871	158	#line 6871 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	126	158	#line 126 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	126	158	#line 126 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+0	127	158		exit -1, -1
+1	38	0	#line 38 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	39	0		mov __DU0shutdown, handle
+1	38	2	#line 38 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	39	2		tst 5, __D0shutdown, __DU0shutdown
+1	38	5	#line 38 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	39	5		brtst 4, __ASM_Label_606, __D0shutdown
+1	38	8	#line 38 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	39	8	#pragma macro 5
+1	39	8		acquire __FCMutex
+1	39	9		mov __FCArgs.FileHandle, handle
+1	39	11		syscall 5, __FCArgs
+1	39	14		mov __D0shutdown, __FCArgs.Result
+1	39	16		release __FCMutex
+1	6300	17	#line 6300 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	38	17	#line 38 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	38	17	#line 38 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	38	17	#line 38 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	41	17	#line 41 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	42	17	#pragma macro 7
+1	42	17		setout __OUT_AC, 2, __constVal0, 1, __constVal3, 8, __constVal0, 6, __constVal32, 7, __constVal0, 5, __constVal0, 10, __constVal96, 11, __constVal32, 12, __constVal32, 0, __constVal63
+1	6306	40	#line 6306 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	41	40	#line 41 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	41	40	#line 41 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	42	40		set __signed_stack_001shutdown, 523
+1	41	43	#line 41 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	41	43	#line 41 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	42	43		set __signed_stack_002shutdown, 1000
+1	41	46	#line 41 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	41	46	#line 41 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	42	46		set __signed_stack_003shutdown, 4
+1	41	49	#line 41 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	41	49	#line 41 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	42	49		set __D0shutdown, 0
+1	43	52	#line 43 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	44	52		acquire __SPTArgsMutex
+1	43	53	#line 43 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	44	53		mov __SPTArgs.Frequency, __signed_stack_001shutdown
+1	43	55	#line 43 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	44	55		mov __SPTArgs.Duration, __signed_stack_002shutdown
+1	43	57	#line 43 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	44	57		mov __SPTArgs.Volume, __signed_stack_003shutdown
+1	43	59	#line 43 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	44	59		mov __SPTArgs.Loop, __D0shutdown
+1	43	61	#line 43 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	44	61		syscall 10, __SPTArgs
+1	43	64	#line 43 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	44	64		mov __D0shutdown, __SPTArgs.Result
+1	43	66	#line 43 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	44	66		release __SPTArgsMutex
+1	43	67	#line 43 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	43	67	#line 43 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	44	67		mov __Wait_7qG2_ms_7qG2_000_inline_shutdown, __shutdown_7qG2_delay_7qG2_000
+1	43	69	#line 43 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	8551	69	#line 8551 "NXCDefs.h"
+1	8552	69		waitv __Wait_7qG2_ms_7qG2_000_inline_shutdown
+1	8551	71	#line 8551 "NXCDefs.h"
+1	44	71	#line 44 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	44	71	#line 44 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	45	71		set __D0shutdown, 1
+1	45	74	#line 45 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	46	74		stop __D0shutdown
+1	45	76	#line 45 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	48	76	#line 48 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+1	49	76		subret __shutdown_return
+2	49	0	#line 49 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	50	0		set __signed_stack_001rtn_code_out, 0
+2	49	3	#line 49 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	49	3	#line 49 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	50	3		set __signed_stack_002rtn_code_out, 48
+2	49	6	#line 49 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	49	6	#line 49 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	50	6		strcat __strbufrtn_code_out, __constStr0009
+2	50	10	#line 50 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	51	10		acquire __TextOutMutex
+2	50	11	#line 50 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	51	11		mov __TextOutArgs.Location.X, __signed_stack_001rtn_code_out
+2	50	13	#line 50 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	51	13		mov __TextOutArgs.Location.Y, __signed_stack_002rtn_code_out
+2	50	15	#line 50 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	51	15		set __TextOutArgs.Options, 0
+2	50	18	#line 50 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	51	18		mov __TextOutArgs.Text, __strbufrtn_code_out
+2	50	20	#line 50 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	51	20		syscall 13, __TextOutArgs
+2	50	23	#line 50 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	51	23		mov __D0rtn_code_out, __TextOutArgs.Result
+2	50	25	#line 50 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	51	25		release __TextOutMutex
+2	50	26	#line 50 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	50	26	#line 50 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	51	26		set __signed_stack_001rtn_code_out, 50
+2	50	29	#line 50 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	50	29	#line 50 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	51	29		set __signed_stack_002rtn_code_out, 48
+2	50	32	#line 50 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	50	32	#line 50 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	51	32		strcat __strbufrtn_code_out, __constStr0010
+2	50	36	#line 50 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	51	36		mov __DU0rtn_code_out, __rtn_code_out_7qG2_code_7qG2_000
+2	50	38	#line 50 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	51	38		fmtnum __strretvalrtn_code_out, __strbufrtn_code_out, __DU0rtn_code_out
+2	50	42	#line 50 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	51	42		strcat __strbufrtn_code_out, __strretvalrtn_code_out
+2	51	46	#line 51 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	52	46		acquire __TextOutMutex
+2	51	47	#line 51 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	52	47		mov __TextOutArgs.Location.X, __signed_stack_001rtn_code_out
+2	51	49	#line 51 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	52	49		mov __TextOutArgs.Location.Y, __signed_stack_002rtn_code_out
+2	51	51	#line 51 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	52	51		set __TextOutArgs.Options, 0
+2	51	54	#line 51 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	52	54		mov __TextOutArgs.Text, __strbufrtn_code_out
+2	51	56	#line 51 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	52	56		syscall 13, __TextOutArgs
+2	51	59	#line 51 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	52	59		mov __D0rtn_code_out, __TextOutArgs.Result
+2	51	61	#line 51 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	52	61		release __TextOutMutex
+2	51	62	#line 51 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	53	62	#line 53 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+2	54	62		subret __rtn_code_out_return
+3	56	0	#line 56 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	57	0		set __open_for_write_7qG2_file_size_7qG2_000, 60
+3	56	3	#line 56 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	58	3	#line 58 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	59	3		set handle, 0
+3	58	6	#line 58 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	58	6	#line 58 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	58	6	#line 58 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	59	6	#pragma macro 7
+3	59	6		acquire __FOMutex
+3	59	7		mov __FOArgs.Filename, __constStr0011
+3	59	9		mov __FOArgs.Length, __open_for_write_7qG2_file_size_7qG2_000
+3	59	11		syscall 1, __FOArgs
+3	59	14		mov handle, __FOArgs.FileHandle
+3	59	16		mov __D0open_for_write, __FOArgs.Result
+3	59	18		release __FOMutex
+3	6466	19	#line 6466 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	58	19	#line 58 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	59	19		mov __open_for_write_7qG2_rtn_code_7qG2_000, __D0open_for_write
+3	61	21	#line 61 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	62	21		mov __unsigned_stack_001open_for_write, __open_for_write_7qG2_rtn_code_7qG2_000
+3	61	23	#line 61 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	62	23	#line 62 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	63	23		mov __D0open_for_write, __constVal36608
+3	62	25	#line 62 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	63	25		cmp 4, __D0open_for_write, __unsigned_stack_001open_for_write, __D0open_for_write
+3	62	29	#line 62 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	63	29		brtst 4, __ASM_Label_637, __D0open_for_write
+3	62	32	#line 62 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	63	32	#pragma macro 7
+3	63	32		acquire __FOMutex
+3	63	33		mov __FOArgs.Filename, __constStr0011
+3	63	35		syscall 2, __FOArgs
+3	63	38		mov __open_for_write_7qG2_file_size_7qG2_000, __FOArgs.Length
+3	63	40		mov handle, __FOArgs.FileHandle
+3	63	42		mov __D0open_for_write, __FOArgs.Result
+3	63	44		release __FOMutex
+3	6486	45	#line 6486 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	62	45	#line 62 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	63	45		mov __open_for_write_7qG2_rtn_code_7qG2_000, __D0open_for_write
+3	62	47	#line 62 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	62	47	#line 62 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	62	47	#line 62 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	65	47	#line 65 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	66	47		mov __DU0open_for_write, __open_for_write_7qG2_rtn_code_7qG2_000
+3	69	49		brcmp 4, __ASM_Label_643, __constVal0, __DU0open_for_write
+3	70	53		brcmp 4, __ASM_Label_644, __constVal36352, __DU0open_for_write
+3	71	57		jmp __ASM_Label_649
+3	67	59	#line 67 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	68	59	#line 68 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	69	59		subret __open_for_write_return
+3	68	61	#line 68 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	69	61	#line 69 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	69	61	#line 69 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	70	61		set __signed_stack_001open_for_write, 0
+3	69	64	#line 69 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	69	64	#line 69 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	70	64		set __signed_stack_002open_for_write, 56
+3	69	67	#line 69 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	69	67	#line 69 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	70	67		strcat __strbufopen_for_write, __constStr0012
+3	70	71	#line 70 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	71	71		acquire __TextOutMutex
+3	70	72	#line 70 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	71	72		mov __TextOutArgs.Location.X, __signed_stack_001open_for_write
+3	70	74	#line 70 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	71	74		mov __TextOutArgs.Location.Y, __signed_stack_002open_for_write
+3	70	76	#line 70 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	71	76		set __TextOutArgs.Options, 0
+3	70	79	#line 70 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	71	79		mov __TextOutArgs.Text, __strbufopen_for_write
+3	70	81	#line 70 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	71	81		syscall 13, __TextOutArgs
+3	70	84	#line 70 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	71	84		mov __D0open_for_write, __TextOutArgs.Result
+3	70	86	#line 70 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	71	86		release __TextOutMutex
+3	70	87	#line 70 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	71	87	#line 71 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	72	87		jmp __ASM_Label_642
+3	71	89	#line 71 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	73	89	#line 73 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	73	89	#line 73 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	74	89		set __signed_stack_001open_for_write, 0
+3	73	92	#line 73 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	73	92	#line 73 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	74	92		set __signed_stack_002open_for_write, 56
+3	73	95	#line 73 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	73	95	#line 73 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	74	95		strcat __strbufopen_for_write, __constStr0013
+3	74	99	#line 74 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	75	99		acquire __TextOutMutex
+3	74	100	#line 74 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	75	100		mov __TextOutArgs.Location.X, __signed_stack_001open_for_write
+3	74	102	#line 74 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	75	102		mov __TextOutArgs.Location.Y, __signed_stack_002open_for_write
+3	74	104	#line 74 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	75	104		set __TextOutArgs.Options, 0
+3	74	107	#line 74 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	75	107		mov __TextOutArgs.Text, __strbufopen_for_write
+3	74	109	#line 74 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	75	109		syscall 13, __TextOutArgs
+3	74	112	#line 74 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	75	112		mov __D0open_for_write, __TextOutArgs.Result
+3	74	114	#line 74 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	75	114		release __TextOutMutex
+3	74	115	#line 74 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	74	115	#line 74 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	75	115		mov __rtn_code_out_7qG2_code_7qG2_000, __open_for_write_7qG2_rtn_code_7qG2_000
+3	74	117	#line 74 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	75	117	#line 75 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	76	117		subcall rtn_code_out, __rtn_code_out_return
+3	75	119	#line 75 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	76	119	#line 76 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	76	119	#line 76 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	77	119	#line 77 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	77	119	#line 77 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	78	119		set __shutdown_7qG2_delay_7qG2_000, 8000
+3	77	122	#line 77 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	78	122	#line 78 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	79	122		subcall shutdown, __shutdown_return
+3	78	124	#line 78 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	81	124	#line 81 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+3	82	124		subret __open_for_write_return
+4	83	0	#line 83 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	84	0	#pragma macro 8
+4	84	0		mov __FWriteArgs.FileHandle, handle
+4	84	2		flatten __FWriteFlattenBuf, __write_recd_7qG2_recd_7qG2_000
+4	84	5		strtoarr __FWriteArgs.Buffer, __FWriteFlattenBuf
+4	84	8		arrsize __FWriteArgs.Length, __FWriteArgs.Buffer
+4	84	11		syscall 4, __FWriteArgs
+4	84	14		mov __write_recd_7qG2_rtn_code_7qG2_000, __FWriteArgs.Result
+4	6611	16	#line 6611 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	83	16	#line 83 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	85	16	#line 85 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	86	16		mov __unsigned_stack_001write_recd, __FWriteArgs.Result
+4	85	18	#line 85 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	86	18	#line 86 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	87	18		set __D0write_recd, 0
+4	86	21	#line 86 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	87	21		cmp 5, __D0write_recd, __unsigned_stack_001write_recd, __D0write_recd
+4	87	25	#line 87 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	88	25		brtst 4, __ASM_Label_662, __D0write_recd
+4	88	28	#line 88 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	89	28		mov __DU0write_recd, __write_recd_7qG2_rtn_code_7qG2_000
+4	92	30		brcmp 4, __ASM_Label_666, __constVal33792, __DU0write_recd
+4	93	34		jmp __ASM_Label_671
+4	90	36	#line 90 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	90	36	#line 90 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	91	36		set __signed_stack_001write_recd, 0
+4	90	39	#line 90 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	90	39	#line 90 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	91	39		set __signed_stack_002write_recd, 56
+4	90	42	#line 90 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	90	42	#line 90 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	91	42		strcat __strbufwrite_recd, __constStr0014
+4	91	46	#line 91 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	92	46		acquire __TextOutMutex
+4	91	47	#line 91 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	92	47		mov __TextOutArgs.Location.X, __signed_stack_001write_recd
+4	91	49	#line 91 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	92	49		mov __TextOutArgs.Location.Y, __signed_stack_002write_recd
+4	91	51	#line 91 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	92	51		set __TextOutArgs.Options, 0
+4	91	54	#line 91 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	92	54		mov __TextOutArgs.Text, __strbufwrite_recd
+4	91	56	#line 91 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	92	56		syscall 13, __TextOutArgs
+4	91	59	#line 91 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	92	59		mov __D0write_recd, __TextOutArgs.Result
+4	91	61	#line 91 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	92	61		release __TextOutMutex
+4	91	62	#line 91 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	92	62	#line 92 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	93	62		jmp __ASM_Label_665
+4	92	64	#line 92 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	94	64	#line 94 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	94	64	#line 94 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	95	64		set __signed_stack_001write_recd, 0
+4	94	67	#line 94 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	94	67	#line 94 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	95	67		set __signed_stack_002write_recd, 56
+4	94	70	#line 94 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	94	70	#line 94 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	95	70		strcat __strbufwrite_recd, __constStr0015
+4	95	74	#line 95 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	96	74		acquire __TextOutMutex
+4	95	75	#line 95 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	96	75		mov __TextOutArgs.Location.X, __signed_stack_001write_recd
+4	95	77	#line 95 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	96	77		mov __TextOutArgs.Location.Y, __signed_stack_002write_recd
+4	95	79	#line 95 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	96	79		set __TextOutArgs.Options, 0
+4	95	82	#line 95 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	96	82		mov __TextOutArgs.Text, __strbufwrite_recd
+4	95	84	#line 95 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	96	84		syscall 13, __TextOutArgs
+4	95	87	#line 95 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	96	87		mov __D0write_recd, __TextOutArgs.Result
+4	95	89	#line 95 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	96	89		release __TextOutMutex
+4	95	90	#line 95 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	95	90	#line 95 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	96	90		mov __rtn_code_out_7qG2_code_7qG2_000, __write_recd_7qG2_rtn_code_7qG2_000
+4	95	92	#line 95 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	96	92	#line 96 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	97	92		subcall rtn_code_out, __rtn_code_out_return
+4	96	94	#line 96 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	97	94	#line 97 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	97	94	#line 97 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	98	94	#line 98 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	98	94	#line 98 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	99	94		set __shutdown_7qG2_delay_7qG2_000, 8000
+4	98	97	#line 98 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	99	97	#line 99 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	100	97		subcall shutdown, __shutdown_return
+4	99	99	#line 99 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	102	99	#line 102 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	102	99	#line 102 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+4	103	99		subret __write_recd_return
+5	130	0	#line 130 "C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc"
+5	131	0		subret ____initialize_global_data_return
+#CLUMPS
+Clump	Name	Offset	File
+0	main	0	C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc
+1	shutdown	161	C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc
+2	rtn_code_out	239	C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc
+3	open_for_write	303	C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc
+4	write_recd	429	C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc
+5	__initialize_global_data	530	C:\Users\Alphonso Monk\Documents\Control-Experiments-using-Lego\Control_Motor_Test.nxc
