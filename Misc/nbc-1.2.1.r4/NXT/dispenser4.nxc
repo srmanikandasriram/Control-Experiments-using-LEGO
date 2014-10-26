@@ -1,0 +1,173 @@
+// Peter Senna Tschudin - peter.senna@gmail.com
+
+#define dispenserMotor OUT_B
+#define dispenserPower 80
+#define dispenserTouch IN_1
+
+#define trayMotor OUT_C
+#define trayPower 50
+#define trayTouch IN_2
+
+#define colorSensor S3
+
+#define dispenserUp moveUntilBump(dispenserMotor, dispenserPower, dispenserTouch); RotateMotor(dispenserMotor, dispenserPower, 80);
+#define dispenserDown RotateMotor(dispenserMotor, dispenserPower, 360);
+
+#define trayStart moveUntilBump(trayMotor, trayPower, trayTouch); RotateMotor(trayMotor, trayPower, 85);
+#define trayNext RotateMotor(trayMotor, trayPower, 90); currentPos+=1; if(currentPos > 4) { currentPos = 1; };
+#define trayPrevious RotateMotor(trayMotor, trayPower, -90); currentPos-=1; if(currentPos < 1) { currentPos = 1; };
+
+
+// Globals
+int color=0;
+int currentPos=0;
+int posColor[] = {0,0,0,0,0};
+
+void changeTrayPosition(int sourcePos, int targetPos){
+//	NumOut(0,LCD_LINE1,sourcePos);
+//	NumOut(0,LCD_LINE2,targetPos);
+
+	if((sourcePos == targetPos) || (sourcePos == 0) || (targetPos == 0))
+		return;
+
+	switch(sourcePos){
+		case 1:
+			switch(targetPos){
+				case 1:
+					return;
+					break;
+				case 2:
+					trayNext;
+					break;
+				case 3:
+					trayNext;
+					trayNext;
+					break;
+				case 4:
+					trayPrevious;
+					break;
+			}
+			break;
+		case 2:
+			switch(targetPos){
+				case 1:
+					trayPrevious;
+					break;
+				case 2:
+					return;
+					break;
+				case 3:
+					trayNext;
+					break;
+				case 4:
+					trayNext;
+					trayNext;
+					break;
+			}
+			break;
+		case 3:
+			switch(targetPos){
+				case 1:
+					trayPrevious;
+					trayPrevious;
+					break;
+				case 2:
+					trayPrevious;
+					break;
+				case 3:
+					return;
+					break;
+				case 4:
+					trayNext;
+					break;
+			}
+			break;
+		case 4:
+			switch(targetPos){
+				case 1:
+					trayNext;
+					break;
+				case 2:
+					trayPrevious;
+					trayPrevious;
+					break;
+				case 3:
+					trayPrevious;
+					break;
+				case 4:
+					return;
+					break;
+			}
+			break;
+	}
+}
+
+int findColorPosition(int colorToFind){
+
+	int i,tmpPos;
+
+	for(i=1;i<5;i++){
+		if(posColor[i] == colorToFind){
+			return i;
+		}
+	}
+
+	for(i=-1;i<3;i++){
+		tmpPos=currentPos + i;	
+		if((tmpPos < 1) || (tmpPos > 4))
+			tmpPos = 1;
+
+		if(posColor[tmpPos] == 0){
+			posColor[tmpPos] = color;
+			return tmpPos;
+		}
+	}
+
+}
+
+inline void moveUntilBump(byte outputs, char pwr, const byte & port){
+
+  SetSensorType(port, SENSOR_TYPE_TOUCH);
+  SetSensorMode(port, SENSOR_MODE_PULSE);
+
+	OnFwdReg(outputs, pwr,OUT_REGMODE_SPEED);
+
+  while(true){
+    ClearSensor(port);
+    until(Sensor(port) > 0);
+    until(Sensor(port) == 1);
+		Off(outputs);
+		break;
+  }
+}
+
+task main()
+{
+	int errors=0;
+	ColorSensorReadType colorCSR;
+	colorCSR.Port = colorSensor;
+
+	SetSensorColorFull(colorSensor);
+
+	trayStart;
+	currentPos = 1;
+
+	while(true){
+		if(errors == 4) {
+			StopAllTasks();
+		}
+
+		dispenserUp;
+
+		SysColorSensorRead(colorCSR);
+		if((colorCSR.Result != NO_ERR) || (colorCSR.ColorValue == 6)){
+			errors+=1;
+		} else {
+			color=colorCSR.ColorValue;
+			changeTrayPosition(currentPos,findColorPosition(color));
+		}
+
+		dispenserDown;
+
+	}
+}
